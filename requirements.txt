@@ -1,0 +1,9 @@
+numpy
+h5py
+matplotlib
+sklearn
+pandas
+tensorflow
+keras
+docker-compose
+mysqlclient
