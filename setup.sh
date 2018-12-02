@@ -1,21 +1,19 @@
 #!/bin/bash
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get autoremove 
-sudo apt-get autoclean
 # unzip
 sudo apt-get install unzip -y
 # python3.6
-sudo add-apt-repository ppa:jonathonf/python-3.6 -y
-sudo apt-get update
-sudo apt-get install python3.6 -y
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
-sudo update-alternatives --config python3
+# sudo add-apt-repository ppa:jonathonf/python-3.6 -y
+# sudo apt-get update
+# sudo apt-get install python3.6 -y
+# sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+# sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+# sudo update-alternatives --config python3
 # lib python
 sudo apt-get install python3-pip -y
 sudo apt-get install python3-dev libpython3-dev -y
-sudo apt-get install python3-mysqldb
+sudo apt-get install python3-mysqldb -y
 # curl
 sudo apt-get install curl -y
 # php
@@ -31,16 +29,12 @@ sudo ufw allow in "Apache Full"
 # use .htaccess
 sudo a2enmod rewrite
 # docker
-sudo apt-get install apt-transport-https ca-certificates software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get update
-sudo apt-get install docker-ce
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
 # install package python
-sudo pip3 install python-binance
 pip3 install -r requirements.txt
+# clean
+sudo apt-get autoremove -y
+sudo apt-get autoclean -y

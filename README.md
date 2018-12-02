@@ -1,4 +1,4 @@
-# Setup server ubuntu 16.04 for Machine learning deployment with PHP, docker, apache2, python3.6, MySQL
+# Setup server ubuntu 18.04 for Machine learning deployment with PHP, docker, apache2, MySQL
 ## Install package
 ```
 chmod +x setup.sh

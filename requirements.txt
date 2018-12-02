@@ -7,3 +7,4 @@ tensorflow
 keras
 docker-compose
 mysql-connector-python
+python-binance
