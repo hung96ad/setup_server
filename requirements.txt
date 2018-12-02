@@ -6,4 +6,4 @@ pandas
 tensorflow
 keras
 docker-compose
-mysqlclient
+mysql-connector-python
