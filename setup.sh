@@ -38,3 +38,18 @@ pip3 install -r requirements.txt
 # clean
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
+# get source from git
+git clone https://github.com/hung96ad/emotion_recognition
+git clone https://github.com/hung96ad/predict_price_cryptocurrencies
+git clone https://github.com/hung96ad/landipage
+cd landipage
+git clone https://github.com/hung96ad/Admin-Panel-User-Management-using-CodeIgniter admin
+cd ..
+cd emotion_recognition
+docker-compose up -d
+# install mysql
+sudo apt-get install mysql-server -y
+sudo mysql_secure_installation # https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+# change info database
+# landipage/admin/application/config/database.php
+# predict_price_cryptocurrencies/config_db.py
